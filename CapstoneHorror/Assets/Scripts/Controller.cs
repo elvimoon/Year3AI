@@ -21,9 +21,9 @@ public class Controller : MonoBehaviour
         Quaternion deltaRotationR = Quaternion.Euler(_EulerAngleVelocity * Time.fixedDeltaTime);
         Quaternion deltaRotationL = Quaternion.Euler(-_EulerAngleVelocity * Time.fixedDeltaTime);
         if (Input.GetKey(KeyCode.UpArrow))
-            rb.AddForce(_camera.forward * 10);
+            rb.AddForce(_camera.forward * 5);
         if (Input.GetKey(KeyCode.DownArrow))
-            rb.AddForce(_camera.forward * -10);
+            rb.AddForce(_camera.forward * -5);
         if (Input.GetKey(KeyCode.LeftArrow))
             rb.MoveRotation(rb.rotation * deltaRotationL);
         if (Input.GetKey(KeyCode.RightArrow))
